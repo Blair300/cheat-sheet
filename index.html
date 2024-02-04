@@ -60,6 +60,7 @@
     img { <br>
   position: absolute; <br>
   border: 3px solid coral; <br>
+  margin: 25px 50px 75px 100px;
   left: 0px; <br>
   top: 0px; <br>
   z-index: -1; <br>
@@ -67,19 +68,17 @@
     
     <div>
     <h3> Border </h3>
-    <p> NOTE: When the width and height of an element are set in pixels, it will be the same size on all devices. <br>
-      Border values --> border: width, style, color. The default border is medium none color. <br>
-      p { <br>
-    
-    border: 3px solid coral; <br>
-    
-    } <br>
-      You can modify the corners of an element’s border-box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50% <br>
+    <pre>border: width, style, color</pre>
+    <pre>border: 3px solid coral</pre>
+    <p> <i>The default border is medium none color. </i> <br>
+      NOTE: When the width and height of an element are set in pixels, it will be the same size on all devices. <br> <br>
+      How to create a circle: You can modify the corners of an element’s border-box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50% <br>
     </p>
     </div>
 
     <div>
     <h3>Margin vs Padding</h3>
+      <pre>margin: 25px 50px 75px 100px;</pre>
       <p>
         Margin will create the space outside of the element, while padding constricts space inwards. Padding can be set in pixels or percentages.<br>
         <ul>
@@ -87,13 +86,28 @@
           <li>Vertical margins collapse, so the space between vertically adjacent elements equals the larger margin.</li>
         </ul>
         <i>`margin: 0 auto` horizontally centers an element inside of its parent content area, if it has a width.</i> <br>
-        How to format:
-      <ul>
-        <li>4 values: top, right, bottom, left</li>
-        <li>3 values: top, left/right, bottom</li>
-        <li>2 values: top/bottom, left/right</li>
-      </ul>
       </p>
+      
+      <p>How to format:</p> <br>
+      <table>
+        <tr>
+          <th>Values</th>
+          <th>Example</th>
+        </tr>
+        <tr>
+          <td>4 values: top, right, bottom, left</td>
+          <td><pre>margin: 25px 50px 75px 100px;</pre></td>
+        </tr>
+        <tr>
+          <td>3 values: top, left/right, bottom</td>
+          <td>margin: 30px 40px 20px</td>
+        </tr>
+        <tr>
+          <td>2 values: top/bottom, left/right</td>
+          <td>margin: 50px 80px</td>
+        </tr>
+      </table>
+      
     </div>
 
     <div>
@@ -115,23 +129,71 @@
 
     <div>
     <h3>Overflow</h3>
-    <p>The overflow property can be set to display, hidden, or scroll, and dictates how HTML will render content that overflows its parent’s content area.<br>
-    Example --> overflow: display | hidden | scroll </p>
+    <pre>overflow: display | hidden | scroll</pre> <br>
+    <p>The overflow property can be set to display, hidden, or scroll, and dictates how HTML will render content that overflows its parent’s content area.</p>
     </div>
 
+    <h2>Display and Positioning</h2>
+    
     <div>
       <h3>Position</h3>
+      <pre>position: relative | absolute | fixed | sticky</pre> <br>
       <p> The <em>position</em> property allows you to specify the position of an element. <br>
-      Example --> position: relative | absolute | fixed | sticky <br>
       <ul>
         <li>When set to `relative`, an element’s position is relative to its default position on the page.</li>
         <li>When set to `absolute`, an element’s position is relative to its closest positioned parent element. It can be pinned to any part of the web page, but the element will still move with the rest of the document when the page is scrolled.
     This value will position an element in relation to the nearest non-static element</li>
-        <li>- When set to `fixed`, an element’s position can be pinned to any part of the web page. The element will remain in view no matter what. This will remove an element from the flow of the HTML document</li>
+        <li>When set to `fixed`, an element’s position can be pinned to any part of the web page. The element will remain in view no matter what. This will remove an element from the flow of the HTML document</li>
         <li>When set to `sticky`, an element can stick to a defined offset position when the user scrolls its parent container.</li>
       </ul>
-  
       </p>
+    </div>
+
+    <div>
+      <h3>z-index</h3>
+      <pre>z-index: 1</pre>
+      <p>Specifies how far back or how far forward an element appears on the page when it overlaps other elements. The z-index property does not work on static elements.
+      </p>
+    </div>
+
+    <div>
+      <h3>Display</h3>
+      <pre>display: inline | block | inline-block</pre> <br>
+      <p>The display property allows you to control how an element flows vertically and horizontally in a document.</p> <br>
+      <table>
+        <tr>
+          <th>Inline elements</th>
+          <th>Block</th>
+          <the> Inline-block</th>
+        </tr>
+        <tr>
+          <td>
+            <ul>
+              <li> Inline elements take up as little space as possible and cannot have manually adjusted width or height.</li>
+              <li>The CSS display property can make any element an inline element. This includes elements not inline by default such as paragraphs, divs, and headings.</li>
+            </ul>
+          </td>
+          <td>
+            Block elements take up the width of their container and can have manually adjusted height. Elements that are block-level by default include all levels of heading elements (<h1> through <h6>), <p>, <div> and <footer>. </footer>
+          </td>
+          <td>Inline-block display combines features of both inline and block elements. Inline-block elements can have set width and height, but they can also appear next to each other and do not take up their entire container width. Images are the best example of default inline-block elements.
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <h3>Float</h3>
+      <pre>float: left;</pre>
+      <p>The float property can move elements as far left or as far right as possible on a web page. <br>
+        NOTE: You can clear an element’s left or right side (or both) using the clear property. The float property is commonly used for wrapping text around an image. Note, however, that moving elements left or right for layout purposes is better suited for tools like CSS grid and Flexbox
+      </p> <br>
+
+      <ul>
+        <li>`left` - moves, or floats, elements as far left as possible.</li>
+        <li>`right` - moves elements as far right as possible.</li>
+      </ul>
+      
     </div>
     
     <h1>BASH</h1>
