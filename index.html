@@ -18,11 +18,121 @@
 
     <h1>HTML</h1>
 
-    <h3><span> </span></h3>
+    <h3> <span> </h3>
     <p>Definition: contains short pieces of text or other HTML. They are used to separate small pieces of content that are on the same line as other content.
     MDN</p>
 
+    <h3> id vs class </h3>
+    <p> When to use <em>id</em>: If an HTML element needs to be styled uniquely, can only have a single value, and only be used once per page. <br>
+    When to use <em>class</em>: accepts multiple values, and can be used broadly throughout an HTML document. <br>
+    Examples of how to use selectors, classes, and id's together: <br>
+    ID Selector = #name {} <br> 
+    Selector= name {} <br>
+    Selector + class= name.class{} <br>
+    Class= .class {} <br>
+    </p>
+
     <h1>CSS</h1>
 
+    display: inline | block | inline-block
+
+    <article id="position">
+        <h3>Positioning</h3>
+        <div>
+          <pre>position: <b>static</b> | relative | absolute | sticky</pre>
+          <p>sets element's positioning, along with top, left, bottom, right properties</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">MDN</a>
+        </div>
+        <div>
+          <pre>margin 0 auto</pre>
+          <p>centers block in containing block</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin">MDN</a>
+        </div>
+        <div>
+          <pre>overflow: <b>visible</b> | hidden | scroll | auto | clip | hidden visible</pre>
+          <p>how to render content outside content-box</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow">MDN</a>
+        </div>
+      </article>
+
+    <h2>Summarized Examples</h2>
+
+    img { <br>
+  position: absolute; <br>
+  border: 3px solid coral; <br>
+  left: 0px; <br>
+  top: 0px; <br>
+  z-index: -1; <br>
+} <br>
+    
+    <div>
+    <h3> Border </h3>
+    <p> NOTE: When the width and height of an element are set in pixels, it will be the same size on all devices. <br>
+      Border values --> border: width, style, color. The default border is medium none color. <br>
+      p { <br>
+    
+    border: 3px solid coral; <br>
+    
+    } <br>
+      You can modify the corners of an element’s border-box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50% <br>
+    </p>
+    </div>
+
+    <div>
+    <h3>Margin vs Padding</h3>
+      <p>
+        Margin will create the space outside of the element, while padding constricts space inwards. Padding can be set in pixels or percentages.<br>
+        <ul>
+          <li>Horizontal margins add, so the total space between the borders of adjacent elements is equal to the sum of the right margin of one element and the left margin of the adjacent element.</li>
+          <li>Vertical margins collapse, so the space between vertically adjacent elements equals the larger margin.</li>
+        </ul>
+        <i>`margin: 0 auto` horizontally centers an element inside of its parent content area, if it has a width.</i> <br>
+        How to format:
+      <ul>
+        <li>4 values: top, right, bottom, left</li>
+        <li>3 values: top, left/right, bottom</li>
+        <li>2 values: top/bottom, left/right</li>
+      </ul>
+      </p>
+    </div>
+
+    <div>
+    <h3>Visibility</h3>
+    <p> The `visibility` property can hide or show elements and be set to one of the following values:
+      <ul>
+        <li>`hidden` — hides an element.</li>
+        <li>`visible` — displays an element.</li>
+        <li>`collapse` — collapses an element.</li>
+      </ul>
+      NOTE: An element with display: none will be completely removed from the web page. An element with visibility: hidden, however, will not be visible on the web page, but the space reserved for it will.
+    </p>
+    </div>
+
+    <div>
+    <h3>Line height</h3>
+    <p>The total element height includes the height property, the top and bottom border heights, and the top and bottom padding heights</p>
+    </div>
+
+    <div>
+    <h3>Overflow</h3>
+    <p>The overflow property can be set to display, hidden, or scroll, and dictates how HTML will render content that overflows its parent’s content area.<br>
+    Example --> overflow: display | hidden | scroll </p>
+    </div>
+
+    <div>
+      <h3>Position</h3>
+      <p> The <em>position</em> property allows you to specify the position of an element. <br>
+      Example --> position: relative | absolute | fixed | sticky <br>
+      <ul>
+        <li>When set to `relative`, an element’s position is relative to its default position on the page.</li>
+        <li>When set to `absolute`, an element’s position is relative to its closest positioned parent element. It can be pinned to any part of the web page, but the element will still move with the rest of the document when the page is scrolled.
+    This value will position an element in relation to the nearest non-static element</li>
+        <li>- When set to `fixed`, an element’s position can be pinned to any part of the web page. The element will remain in view no matter what. This will remove an element from the flow of the HTML document</li>
+        <li>When set to `sticky`, an element can stick to a defined offset position when the user scrolls its parent container.</li>
+      </ul>
+  
+      </p>
+    </div>
+    
     <h1>BASH</h1>
   </body>
