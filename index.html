@@ -18,23 +18,19 @@
 
     <h1>HTML</h1>
 
-    <h3> <span> </h3>
-    <p>Definition: contains short pieces of text or other HTML. They are used to separate small pieces of content that are on the same line as other content.
-    MDN</p>
-
     <h3> id vs class </h3>
     <p> When to use <em>id</em>: If an HTML element needs to be styled uniquely, can only have a single value, and only be used once per page. <br>
-    When to use <em>class</em>: accepts multiple values, and can be used broadly throughout an HTML document. <br>
-    Examples of how to use selectors, classes, and id's together: <br>
+    When to use <em>class</em>: accepts multiple values, and can be used broadly throughout an HTML document.
+    </p>
+
+    <h1>CSS</h1>
+
+    <p>Examples of how to use selectors, classes, and id's together in CSS: <br>
     ID Selector = #name {} <br> 
     Selector= name {} <br>
     Selector + class= name.class{} <br>
     Class= .class {} <br>
     </p>
-
-    <h1>CSS</h1>
-
-    display: inline | block | inline-block
 
     <article id="position">
         <h3>Positioning</h3>
@@ -69,7 +65,7 @@
     <div>
     <h3> Border </h3>
     <pre>border: width, style, color</pre>
-    <pre>border: 3px solid coral</pre> <br>
+    <pre>border: 3px solid coral</pre>
     <p> <i>The default border is medium none color. </i> <br>
       NOTE: When the width and height of an element are set in pixels, it will be the same size on all devices. <br> <br>
       How to create a circle: You can modify the corners of an element’s border-box with the border-radius property. You can create a border that is a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50% <br>
@@ -112,7 +108,8 @@
 
     <div>
     <h3>Visibility</h3>
-    <p> The `visibility` property can hide or show elements and be set to one of the following values:
+    <pre>visibility: hidden | visible | collapse</pre>
+    <p> The <strong>visibility</strong> property can hide or show elements and be set to one of the following values:
       <ul>
         <li><strong>hidden</strong> — hides an element.</li>
         <li><strong>visible</strong> — displays an element.</li>
@@ -124,6 +121,7 @@
 
     <div>
     <h3>Line height</h3>
+    <pre>line-height: 1.5;</pre>
     <p>The total element height includes the height property, the top and bottom border heights, and the top and bottom padding heights</p>
     </div>
 
@@ -174,7 +172,7 @@
             </ul>
           </td>
           <td>
-            Block elements take up the width of their container and can have manually adjusted height. Elements that are block-level by default include all levels of heading elements (<h1> through <h6>), <p>, <div> and <footer>. </footer>
+            Block elements take up the width of their container and can have manually adjusted height. Elements that are block-level by default include all levels of heading elements (h1 through h6), p, div, and footer.
           </td>
           <td>
             Inline-block display combines features of both inline and block elements. Inline-block elements can have set width and height, but they can also appear next to each other and do not take up their entire container width. Images are the best example of default inline-block elements.
@@ -188,7 +186,7 @@
       <pre>float: left;</pre>
       <p>The float property can move elements as far left or as far right as possible on a web page. <br>
         NOTE: You can clear an element’s left or right side (or both) using the clear property. The float property is commonly used for wrapping text around an image. Note, however, that moving elements left or right for layout purposes is better suited for tools like CSS grid and Flexbox
-      </p> <br>
+      </p>
 
       <ul>
         <li><strong>left</strong> - moves, or floats, elements as far left as possible.</li>
